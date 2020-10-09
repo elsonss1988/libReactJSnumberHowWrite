@@ -1,14 +1,17 @@
 {
-  "name": "libreactjs",
+  "name": "libreactjsnumeroporextenso",
   "version": "0.1.0",
   "description": "numero por extenso",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module":"dist/index.js",
   "repository": "https://github.com/elsonss1988/libReactJSnumberHowWrite.git",
   "author": "Elson",
   "license": "MIT",
   "private": false,
+  "files":["dist","README.md"],
   "scripts": {
-    "start": "webpack-dev-server --hot --port=8087"
+    "start": "webpack-dev-server --hot --port=8087",
+    "build":"cross-env NODE_ENV=production babel src/lib --out-dir dist"
   },
   "dependencies": {
     "@babel/cli": "^7.11.6",
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
     "html-webpack-plugin": "^4.5.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
